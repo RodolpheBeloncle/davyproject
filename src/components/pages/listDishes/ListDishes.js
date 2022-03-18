@@ -10,13 +10,13 @@ const ListDishes = () => {
 
   const getIngred = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/ingredients/liste/${id}`)
+      .get(`http://localhost:8000/api/ingredients/liste/${id}`)
       .then((response) => setIngred(response.data));
   };
 
   const getPlats = () => {
     axios
-      .get(`${process.env.REACT_APP_API_URL}/api/dishes`)
+      .get(`http://localhost:8000/api/dishes`)
       .then((response) => setPlats(response.data));
   };
 
@@ -36,7 +36,7 @@ const ListDishes = () => {
                 <div className="title">{Dishe.name}</div>
                 <img
                   alt={Dishe.name}
-                  src={`${process.env.REACT_APP_API_URL}/uploads/${Dishe.image}`}
+                  src={`http://localhost:8000/uploads/${Dishe.image}`}
                 />
               </div>
               <div className="lien">
@@ -52,7 +52,7 @@ const ListDishes = () => {
                 <div className="title">{Dishe.name}</div>
                 <img
                   alt={Dishe.name}
-                  src={`${process.env.REACT_APP_API_URL}/uploads/${Dishe.image}`}
+                  src={`http://localhost:8000/uploads/${Dishe.image}`}
                 />
               </div>
               <div className="lien">
